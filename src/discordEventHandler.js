@@ -8,6 +8,10 @@ const client = new Client({
     ]
 });
 
+client.once(Events.ClientReady, (client) => {
+    console.log(`Logged in as ${client.user.tag}`)
+})
+
 client.on(Events.MessageCreate,(message) => {
     console.log(message)
 })
