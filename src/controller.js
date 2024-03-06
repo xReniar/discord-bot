@@ -2,11 +2,11 @@ const express = require("express")
 const router = express.Router()
 
 router.get("/",(req,res) => {
-    res.send("/")
+    res.sendFile("index.html", {root: "./views"})
 })
 
 router.get("/home",(req,res) => {
-    res.send("/home")
+    res.sendFile("home.html", {root: "./views"})
 })
 
 router.get("/settings",(req,res) => {
