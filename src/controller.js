@@ -1,12 +1,14 @@
 const express = require("express")
 const router = express.Router()
 
+const ROOT = "./views"
+
 router.get("/",(req,res) => {
-    res.sendFile("index.html", {root: "./views"})
+    res.sendFile("index.html", {root: ROOT})
 })
 
 router.get("/home",(req,res) => {
-    res.sendFile("home.html", {root: "./views"})
+    res.sendFile("home.html", {root: ROOT})
 })
 
 router.get("/settings",(req,res) => {
