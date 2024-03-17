@@ -10,7 +10,7 @@ function discordEventHandler(client) {
     })
     
     client.on(Events.MessageCreate,(message) => {
-        //console.log(`${message.author.username}: ${message.content}`)
+        console.log(`${message.author.username}: ${message.content}`)
     })
 }
 
