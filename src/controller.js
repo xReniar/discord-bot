@@ -1,4 +1,8 @@
 const express = require("express")
+/*
+const client = require("./discord/setup")
+const { discord } = require("./../conf.json")
+*/
 const router = express.Router()
 
 const ROOT = "./views"
