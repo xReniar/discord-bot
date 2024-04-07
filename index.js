@@ -1,7 +1,7 @@
 /* importing necessary modules */
 const express = require("express")
 const app = express()
-const client = require("./src/discord/setup")
+const client = require("./src/discord/client")
 
 /* conf.json, server routing and discord various handlers */
 const { discord, server } = require("./conf.json")
