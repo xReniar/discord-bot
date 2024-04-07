@@ -45,9 +45,9 @@ function registerSlashCommands(commands){
     })();
 }
 
-function discordCommandHandler(client){
+function setCommandHandler(client){
     commands = importSlashCommands(client)
     registerSlashCommands(commands)
 }
 
-module.exports = discordCommandHandler
+module.exports = setCommandHandler;
