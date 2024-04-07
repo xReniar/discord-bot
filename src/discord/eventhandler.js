@@ -4,7 +4,7 @@ const { Events } = require("discord.js")
  * Handles Discord events.
  * @param {Client} client - The Discord client instance.
  */
-function discordEventHandler(client) {
+function setEventHandler(client) {
     client.once(Events.ClientReady, (client) => {
         console.log(`Logged in as ${client.user.tag}`)
     })
@@ -36,4 +36,4 @@ function discordEventHandler(client) {
     })
 }
 
-module.exports = discordEventHandler
+module.exports = setEventHandler;
