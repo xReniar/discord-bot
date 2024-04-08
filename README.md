@@ -5,16 +5,10 @@
 - express.js
 
 ## configurations
-The `conf.json` has this structure:
-```json
-{
-    "discord": {
-        "token":"bot-token",
-        "guild_id":"guild-id",
-        "client_id":"bot-id"
-    },
-    "server": {
-        "port": 8080
-    }
-}
+Is it necessary to write a `.env` file and paste these with the correct values :
+```txt
+DISCORD_TOKEN=discord_token
+DISCORD_GUILD_ID=discord_guild_id
+DISCORD_CLIENT_ID=discord_client_id
+SERVER_PORT=server_port
 ```
