@@ -1,7 +1,7 @@
 const { Collection, REST, Routes } = require("discord.js")
-const { discord } = require("../../conf.json")
 const path = require("node:path")
 const fs = require("node:fs")
+require("dotenv").config();
 
 function importSlashCommands(client){
     const commands = []
@@ -30,12 +30,12 @@ function importSlashCommands(client){
 }
 
 function registerSlashCommands(commands){
-    const rest = new REST().setToken(discord.token);
+    const rest = new REST().setToken(process.env.DISCORD_TOKEN);
     (async () => {
         try {
             console.log(`Started refreshing ${commands.length} application (/) commands`)
             const data = await rest.put(
-                Routes.applicationGuildCommands(discord.client_id,discord.guild_id),
+                Routes.applicationGuildCommands(process.env.DISCORD_CLIENT_ID,process.env.DISCORD_GUILD_ID),
                 { body: commands },
             )
             console.log(`Succesfully reloaded ${data.length} application (/) commands`)
